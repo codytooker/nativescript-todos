@@ -1,7 +1,7 @@
 <template web>
   <div>
     <input
-      class="py-4 pr-4 pl-16 w-full text-xl"
+      class="py-4 pr-4 pl-16 w-full text-xl border-b-2 border-grey"
       type="text"
       placeholder="What needs to be done?"
       v-model="todo"
