@@ -16,8 +16,17 @@
 
 <template native>
   <Page>
-    <ActionBar :title="navbarTitle" />
-    <StackLayout backgroundColor="#3c495e"></StackLayout>
+    <ActionBar :title="title" />
+    <StackLayout>
+      <todo-input @addTodo="this.handleAddTodo" />
+      <todo-list
+        v-show="hasTodos"
+        :todos="this.allTodos"
+        @removeTodo="this.handleRemoveTodo"
+        @toggleComplete="this.toggleComplete"
+        @clearCompleted="this.clearCompleted"
+      />
+    </StackLayout>
   </Page>
 </template>
 
@@ -35,7 +44,6 @@ export default {
   data() {
     return {
       title: 'todos',
-      todos: [],
     }
   },
   computed: {
@@ -62,5 +70,3 @@ export default {
   },
 }
 </script>
-
-<style scoped></style>

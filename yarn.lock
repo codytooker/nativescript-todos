@@ -7244,6 +7244,18 @@ nativescript-hook@0.2.4:
     glob "^6.0.1"
     mkdirp "^0.5.1"
 
+nativescript-ui-core@~2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/nativescript-ui-core/-/nativescript-ui-core-2.0.1.tgz#c59fee4d714d5138460b7aa98df217f1e02b643e"
+  integrity sha512-6XeRrbp3cP7MFqny6TXpF8VVwhA5bfE2iC1RIB+YjEclK+gC1b+4iov4Yl8c4oP6CMQ40AfwU11R9cEsuRr81g==
+
+nativescript-ui-listview@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/nativescript-ui-listview/-/nativescript-ui-listview-6.2.0.tgz#18317f684a7b720b11bfff819e105e0aa19ed623"
+  integrity sha512-2xVg8PAb9DQU2iR0kPh2zDDNZD9894yHgawWjyxZrYb1rnkuGQ1DQRP7c9kneL9SxhDeGZE402sI3VD5DAFx9Q==
+  dependencies:
+    nativescript-ui-core "~2.0.0"
+
 nativescript-vue-navigator@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/nativescript-vue-navigator/-/nativescript-vue-navigator-0.0.3.tgz#3a090c786726ad4e99d0ca6c36d1bbfc348f305c"

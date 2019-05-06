@@ -11,7 +11,7 @@
     "clean:ios": "rimraf platforms/ios",
     "clean:platforms": "rimraf platforms",
     "debug:android": "npm run setup-webpack-config && tns debug android --bundle --env.development",
-    "debug:ios": "npm run setup-webpack-config && tns debug ios --hmr --env.development",
+    "debug:ios": "npm run setup-webpack-config && tns debug ios --bundle --env.development",
     "preview:android": "npm run setup-webpack-config && tns preview --bundle --env.development --env.android",
     "preview:ios": "npm run setup-webpack-config && tns preview --bundle --env.development --env.ios",
     "remove-webpack-config": "node ./node_modules/vue-cli-plugin-nativescript-vue/lib/scripts/webpack-maintenance post",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "nativescript-ui-listview": "^6.2.0",
     "nativescript-vue": "^2.2.0",
     "nativescript-vue-navigator": "^0.0.3",
     "tns-core-modules": "^5.2.2",

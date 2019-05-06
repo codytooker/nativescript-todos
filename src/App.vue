@@ -7,32 +7,25 @@
 </template>
 
 <template native>
-  <Page>
-    <ActionBar :title="navbarTitle" />
-    <FlexboxLayout class="layout">
-      <Button text="Home" @tap="goToHomePage" row="0" />
-    </FlexboxLayout>
-  </Page>
+  <home />
 </template>
 <script>
+import Home from '~/views/Home'
 const { VUE_APP_MODE } = process.env
 
 export default {
+  components: {
+    Home,
+  },
   data() {
     return {
       navbarTitle: `App.vue`,
     }
   },
-  methods: {
-    // goToHomePage() {
-    //   this.goTo('home')
-    // },
-    // goToAboutPage() {
-    //   this.goTo('about')
-    // },
-    // goTo(route) {
-    //   VUE_APP_MODE === 'web' ? this.$router.push(route) : this.$navigator.navigate(route)
-    // },
+  created() {
+    if (VUE_APP_MODE === 'web') return
+    console.log(this.$$navigator)
+    this.$navigator.navigate('home')
   },
 }
 </script>
@@ -42,5 +35,9 @@ html,
 body {
   height: 100%;
 }
-@import 'https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css';
+@import 'styles/main.css';
+</style>
+
+<style native>
+@import 'styles/main.css';
 </style>

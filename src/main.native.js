@@ -1,9 +1,10 @@
 import Vue from 'nativescript-vue'
 import Navigator from 'nativescript-vue-navigator'
+import RadListView from 'nativescript-ui-listview/vue'
 
 import App from './App.vue'
 import { options } from './router'
-// import store from "./store";
+import store from './store'
 
 // adapt vue-router routes to nativescript-vue-navigator
 const routes = options.routes.reduce((data, route) => {
@@ -14,6 +15,7 @@ const routes = options.routes.reduce((data, route) => {
 }, {})
 
 Vue.use(Navigator, { routes })
+Vue.use(RadListView)
 
 // Set the following to `true` to hide the logs created by nativescript-vue
 Vue.config.silent = false
@@ -22,6 +24,6 @@ Vue.config.silent = false
 // Vue.config.debug = true;
 
 new Vue({
-  // store,
+  store,
   render: h => h('frame', [h(App)]),
 }).$start()
